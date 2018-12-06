@@ -1,0 +1,38 @@
+.login{
+    width: 100%;
+    height: 100%;
+    background: url('/public/assets/QQ图片20181204101407.png') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    .icon{
+        position: absolute;
+        top:19%;
+        left: 39%;
+        width: 80px;
+        height: 80px;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+    }
+    .btn{
+        width: 100%;
+        height: 130px;
+        position: absolute;
+        top:40%;
+        left: 0;
+        text-align: center;
+        p{
+            width: 80%;
+            height: 40px;
+            border:2px solid #d74d45;
+            border-radius: 20px;
+            margin:15px auto;
+            color: #d74d45;
+            span{
+                text-align: center;
+            }
+        }
+    }
+}

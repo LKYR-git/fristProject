@@ -1,0 +1,126 @@
+.wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header{
+  width: 100%;
+  height: 40px;
+  background: #323739;
+  nav{
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-around;
+      span{
+          width: 10%;
+          height: 95%;
+          padding: 8px;
+          box-sizing: border-box;
+          img{
+              width: 100%;
+              height: 100%;
+              display: block;
+              color: #fff;
+          }
+      }
+      .inp{
+          width: 70%;
+          height: 100%;
+          font-size: 14px;
+          color: #adb0b0;
+          input{
+              width: 100%;
+              height: 65%;
+              padding: 0 30%;
+              box-sizing: border-box;
+              border-radius: 20px;
+              background: #5b6061;
+              
+          }
+      }
+  }
+}
+.content{
+  flex: 1;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  background: #e6edf0;
+  a{
+    flex: 1;
+    height: 100%;
+    font-size: 0;
+    text-align: center;
+  }
+  a p{
+    width: 1rem;
+    height: 1rem;
+    margin:4px auto;
+  }
+  a span{
+    font-size: .3rem;
+    color: #2d2d2d;
+  }
+  a.active span{
+    color: #c0c0c0;
+  }
+  a:first-child{
+    p{
+      background: url('../../public/assets/discover.png') no-repeat 0 0/100%;
+    }
+  }
+  a:first-child,.active{
+    p{
+      background: url('../../public/assets/discover_active.png') no-repeat 0 0/100%;
+    }
+  }
+  a:nth-child(2){
+    p{
+      background: url('../../public/assets/video.png') no-repeat 0 0/100%;
+    }
+  }
+  a:nth-child(2),.active{
+    p{
+      background: url('../../public/assets/video_active.png') no-repeat 0 0/100%;
+    }
+  }
+  a:nth-child(3){
+    p{
+      background: url('../../public/assets/my.png') no-repeat 0 0/100%;
+    }
+  }
+  a:nth-child(3),.active{
+    p{
+      background: url('../../public/assets/my_active.png') no-repeat 0 0/100%;
+    }
+  }
+  a:nth-child(4){
+    p{
+      background: url('../../public/assets/friend.png') no-repeat 0 0/100%;
+    }
+  }
+  a:nth-child(4),.active{
+    p{
+      background: url('../../public/assets/friend_active.png') no-repeat 0 0/100%;
+    }
+  }
+  a:last-child{
+    p{
+      background: url('../../public/assets/account.png') no-repeat 0 0/100%;
+    }
+  }
+  a:last-child,.active{
+    p{
+      background: url('../../public/assets/account_active.png') no-repeat 0 0/100%;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.loginWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    .loginHeader{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+        line-height: 40px;
+        border-bottom: 1px solid #ccc;
+        background: #343a3c;
+        font-size: 15px;
+        color: #fff;
+        span{
+            text-align: center;
+            flex: 1;
+        }
+    }
+    .inp{
+        width: 100%;
+        height: 100px;
+        p{
+            width:90%;
+            height: 40px;
+            margin: 0 auto;
+            background: #fff;
+            border-bottom: 1px solid #ccc;
+            input{
+                width: 90%;
+                height: 100%;
+            }
+        }
+        
+    }
+    .btnLogin{
+        width: 90%;
+        height: 40px;
+        border-radius: 20px;
+        background: #343a3c;
+        margin: 0 auto;
+        span{
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+}
