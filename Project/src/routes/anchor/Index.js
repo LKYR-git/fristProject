@@ -18,6 +18,7 @@ class Index extends React.PureComponent{
       getPersonalizedList
     } = this.props;
     let NewPersonalizedList = getPersonalizedList.slice(0,6);
+    console.log(NewPersonalizedList);
     return <div>
      <WingBlank>
         <Carousel

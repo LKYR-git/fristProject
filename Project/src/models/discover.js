@@ -1,25 +1,33 @@
-import {search} from '../services/index';
+import {search,hot} from '../services/index';
 export default{
     namespace:'discover',
     state:{
         songs:[],
-        songCount:''
+        songCount:'',
+        hotList:[]
     },
     effects:{
         *search({payload},{call,put}){
-            console.log('payload...',payload);
             let response = yield call(search,payload);
-            console.log(response);
             yield put({
                 type: 'updateState',
                 payload: response.data.result
               })
+        },
+        *hot(action,{call,put}){
+          let response = yield call(hot);
+            yield put({
+                type:'hotlist',
+                payload:response.data.result.hots
+            })
         }
     },
     reducers:{
         updateState(state,action){
-            console.log(state,action);
             return{...state,...action.payload}
+        },
+        hotlist(state,{payload}){
+            return{...state,hotList:payload}
         }
     }
 }

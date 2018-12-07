@@ -1,0 +1,143 @@
+.play{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url('../../public/assets/QQ图片20181205183307.png') no-repeat;
+    background-size: 100% 100%;
+    .playHeader{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        span{
+            width: 10%;
+            height: 100%;
+            display: inline-block;
+            padding: 5px;
+            box-sizing: border-box;
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+        div{
+            width: 80%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            line-height: 32px;
+            span{
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+    }
+    .imgUrl{
+        flex: 1;
+        .url{
+            width: 80%;
+            height: 19rem;
+            margin:  0 auto;
+            .urls{
+                width: 80%;
+                height: 80%;
+                margin: 50px auto;
+                border-radius: 50%;
+                overflow: hidden;
+                animation: rotate 10s linear infinite;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    
+                }
+            }
+            @keyframes rotate{
+                from{
+                  transform: rotate(0deg);
+                }
+                to{
+                  transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    .audio{
+        width: 100%;
+        height: 150px;
+        .playTop{
+            width: 100%;
+            height: 50px;
+        }
+        .playcontent{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            span{
+                width: 15%;
+                height: 100%;
+                line-height: 50px;
+                text-align: center;
+            }
+            div{
+                width: 70%;
+                height: 100%;
+                margin: 15px auto;
+                box-sizing: border-box;
+                b{
+                    width: 100%;
+                    height: 5px;
+                    background: #9e9ba4;
+                    display: inline-block;
+                    position: relative;
+                    border-radius: 2px;
+                    span{
+                        position: absolute;
+                        left: 0;
+                        top:0;
+                        height: 100%;
+                        background: #d5384b;
+                    }
+                }
+            }
+        }
+        .playfooter{
+            width: 100%;
+            height: 50px;
+            
+            ul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    flex:1;
+                    line-height: 50px;
+                    img{
+                        width: 40%;
+                        height: 60%;
+                        display: block;
+                        color: #c6c1bb;
+                        margin:  10px auto;
+                    }
+                }
+                li:nth-child(2){
+                    transform: rotateY(180deg);
+                }
+                li:nth-child(3){
+                    img{
+                        width: 55%;
+                        height: 80%;
+                        display: block;
+                        color: #c6c1bb;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
