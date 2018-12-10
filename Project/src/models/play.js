@@ -1,4 +1,4 @@
-import {getUrl,getUrlDetail} from '../services/index'
+import {getUrl,getUrlDetail,getLyric} from '../services/index'
 
 export default{
     namespace:"geturl",
@@ -6,14 +6,14 @@ export default{
         id: 0,
         url: '',
         info: {},
-        detail:{}
+        detail:{},
+        lyric:''
     },
     effects:{
         *getUrl({payload},{call,put}){
             let response = yield call(getUrl,payload);
             let resDetail = yield call(getUrlDetail,payload);
-            console.log('res',response);
-            console.log('resDetail..',resDetail);
+            //console.log('resDetail..',resDetail);
             let obj = {info:response.data.data[0]};
             obj.id = payload;
             obj.url = response.data.data[0].url;
@@ -22,11 +22,21 @@ export default{
               type: 'updateState',
               payload: obj
             })
+        },
+        *getlyric({payload},{call,put}){
+            let response = yield call(getLyric,payload);
+            yield put({
+                type:'updateState',
+                payload:{
+                    lyric:response.data.lrc.lyric
+                }
+                
+            })
         }
     },
     reducers:{
         updateState(state,action){
-            console.log('action',action)
+            //console.log('action',action)
             return{...state,...action.payload}
         }
     }

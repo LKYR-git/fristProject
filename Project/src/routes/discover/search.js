@@ -55,7 +55,7 @@ export default class Search extends Component {
                     <p><input ref="search"  className={styles.inp} placeholder="再见  你好 - 金奇志" 
                         onBlur={this.search.bind(this)}
                     /></p>
-                    <span>取消</span>
+                    <span onClick={this.search.bind(this)}>搜索</span>
                 </div>
                 <div className={styles.searchList}>
                     <div className={styles.searchNav}>

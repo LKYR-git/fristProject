@@ -20,3 +20,8 @@ export function hot(){
 export function getUrlDetail(params){
     return request(`${host}/song/detail?ids=${params}`)
 }
+
+// 获取歌词
+export function getLyric(id){
+    return request(`${host}/lyric?id=${id}`)
+}

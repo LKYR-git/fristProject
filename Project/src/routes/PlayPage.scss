@@ -38,6 +38,18 @@
     }
     .imgUrl{
         flex: 1;
+        >div{
+            // width: 100%;
+            // height: 100%;
+            ul{
+                // width: 100%;
+                // height: 100%;
+                li:nth-child(2){
+                    width:100%;
+                    height: 100%;
+                }
+            }
+        }
         .url{
             width: 80%;
             height: 19rem;
