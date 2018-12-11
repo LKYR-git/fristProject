@@ -1,0 +1,104 @@
+.accountWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .accountHeader{
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: #353535;
+        color: #fff;
+    }
+    .accountContent{
+        width: 100%;
+        height: 580px;
+        overflow-y: scroll;
+        .accountMessge{
+            width: 100%;
+            height: 150px;
+            border-bottom: 1px solid #ccc;
+            .top{
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span{
+                    flex:1;
+                    text-align: center;
+                }
+                .imgs{
+                    width: 100px;
+                    height: 100px;
+                    
+                    span{
+                        width: 50px;
+                        height: 50px;
+                        margin: 25px;
+                        display: inline-block;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        }
+                    }
+                }
+                span:nth-child(3){
+                    width: 70%;
+                    height: 30px;
+                    border-radius: 10px;
+                    border: 3px solid #ccc;
+                    line-height: 30px;
+                    margin: 0 auto;
+                    display: inline-block;
+                }
+            }
+            .bottom{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                border-top: 1px solid #ccc;
+                dl{
+                    flex:1;
+                    text-align: center;
+                }
+            }
+        }
+        .accountList{
+            width: 100%;
+            height: 100%;
+            div{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                line-height: 50px;
+                span:nth-child(1){
+                    width: 10%;
+                    height: 100%;
+                }
+                span:nth-child(2){
+                    width: 90%;
+                    height: 100%;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+            div:last-child{
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                border-bottom: 5px solid #eee;
+                border-top: 5px solid #eee;
+                span{
+                    width: 100%;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
 import styles from './logins.scss';
-import {connect} from 'dva'
-
+import {connect} from 'dva';
+//import PubSub from 'pubsub-js';
 //es7修饰器
-@connect(state=>{
-    console.log('state...',state)
-    return{
-        login:state.login
-    }
+@connect(({logins})=>{
+    console.log('state...',logins)
+    return logins
 },dispatch=>{
     return{
         login:payload=>{
-
             dispatch({
                 type:'logins/login',
                 payload
@@ -44,9 +41,14 @@ class Logins extends Component {
           phone: this.state.phone,
           password: this.state.password
         })
+        //PubSub.publish('myheadImg',this.props.logins);
       }
 
     render() {
+        // if(!this.props.logins.profile){
+        //     return null;
+        // }
+        //let {logins} = this.props;
         return (
             <div className={styles.loginWrap}>
                 <header className={styles.loginHeader}>
@@ -61,9 +63,7 @@ class Logins extends Component {
                               onChange={e=>this.setState({password:e.target.value})}/></p>
                 </div>
                 <div className={styles.btnLogin}>
-                    <span onClick={()=>{
-                            this.submit()
-                        }}>登录</span>
+                    <span onClick={this.submit.bind(this)}>登录</span>
                 </div>
             </div>
         )
