@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Index.scss'
 import {connect} from 'dva'
 import { NavLink } from 'dva/router'
+import RouterView from '../../router/RouterView';
 import { Carousel, WingBlank } from 'antd-mobile';
 class Index extends React.PureComponent{
   componentDidMount() {
@@ -12,6 +13,9 @@ class Index extends React.PureComponent{
     getbanner();
     getPersonalized();
   }
+  // goMusiclist(){
+  //   this.props.history.push('/main/MusicList')
+  // }
   render(){
     let {
       getBannerList,
@@ -52,7 +56,7 @@ class Index extends React.PureComponent{
           </dl>
           <dl>
             <dt><img src="/assets/caidan.png"/></dt>
-            <span>歌单</span>
+            <span><NavLink to='/main/MusicList'>歌单</NavLink></span>
           </dl>
           <dl>
             <dt><img src="/assets/paixingbang.png"/></dt>

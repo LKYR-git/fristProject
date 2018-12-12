@@ -24,6 +24,12 @@ import AudioProcess from '../components/AudioProcess';
                 type:'geturl/getlyric',
                 payload:id
             })
+        },
+        changePlay:payload=>{
+            dispatch({
+                type:'geturl/changePlay',
+                payload
+            })
         }
     }
 })
@@ -112,6 +118,10 @@ export default class Play extends Component {
             this.refs.audio.play();
         })
     }
+    //切换上下首
+    chanagePlay(type){
+        this.props.changePlay(type);
+    }
     render() {  
         //去判断有没有值
         if(!this.props.detail.al){
@@ -155,9 +165,9 @@ export default class Play extends Component {
                     <div className={styles.playfooter}>
                         <ul>
                             <li><img src="../../public/palyIcon/shuaxin.png"/></li>
-                            <li><img src="../../public/palyIcon/xiayishou1.png"/></li>
+                            <li onClick={()=>this.chanagePlay('prev')}><img src="../../public/palyIcon/xiayishou1.png"/></li>
                             <li onClick={this.chageState.bind(this)}>{isPlay?<img src="../../public/palyIcon/zanting.png"/>:<img src="../../public/palyIcon/weibiaoti--.png"/>}</li>
-                            <li><img src="../../public/palyIcon/xiayishou1.png"/></li>
+                            <li onClick={()=>this.chanagePlay('next')}><img src="../../public/palyIcon/xiayishou1.png"/></li>
                             <li><img src="../../public/palyIcon/liebiao.png"/></li>
                         </ul>
                     </div>

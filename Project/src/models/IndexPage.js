@@ -30,7 +30,15 @@ export default{
                 type:'Personalized',
                 payload:res.result
             })
-        }
+        },
+        // *getMusicList(action,{call,put}){
+        //     let res = yield call(()=>{
+        //         return fetch(`http://123.206.55.50:14000/top/playlist`)
+        //         .then(res=>res.json())
+        //         .then(body=>body)
+        //     })
+        //     console.log('music',res);
+        // }
     },
 
     reducers:{

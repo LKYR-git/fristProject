@@ -21,6 +21,12 @@ import styles from './search.scss'
             dispatch({
                 type:'discover/hot'
             })
+        },
+        playAll:payload=>{
+            dispatch({
+                type:'geturl/getUrls',
+                payload
+            })
         }
     }
 })
@@ -45,6 +51,13 @@ export default class Search extends Component {
             falg:false
         })
     }
+    playAlls(){
+        this.props.playAll(this.props.songs.map(item=>item.id));
+        this.props.history.push(`/play/${this.props.songs[0].id}`);
+        this.setState({
+            falg:false
+        })
+    }
 
     render() {
         let {songs,hotList} =this.props;
@@ -55,7 +68,7 @@ export default class Search extends Component {
                     <p><input ref="search"  className={styles.inp} placeholder="再见  你好 - 金奇志" 
                         onBlur={this.search.bind(this)}
                     /></p>
-                    <span onClick={this.search.bind(this)}>搜索</span>
+                    <span onClick={this.playAlls.bind(this)}>播放全部</span>
                 </div>
                 <div className={styles.searchList}>
                     <div className={styles.searchNav}>

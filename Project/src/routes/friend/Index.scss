@@ -25,7 +25,7 @@
                     color: #fff;
                 }
             }
-            .scExample{
+            .tab{
                 width: 40%;
                 height: 30px;
                 margin: 5px 0;
@@ -33,7 +33,18 @@
                 display: flex;
                 border-radius: 15px;
                 border: 2px solid #fff;
-                //padding-bottom: 13px;
+                b{
+                    flex:1;
+                    line-height: 30px;
+                    text-align: center;
+                }
+                b:nth-child(1){
+                    border-radius:14px;
+                    background: #fff; 
+                }
+                b:nth-child(2){
+                    color: #fff;
+                }
             }
         }
     }

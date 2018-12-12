@@ -11,7 +11,7 @@ class MainPage extends React.PureComponent{
           <RouterView routes={this.props.routes}></RouterView>
         </section>
         <div className={styles.footer}>
-        <NavLink to="/main/discover">
+        <NavLink to="/main/discover/anchor">
           <p></p>
           <span>发现</span>
         </NavLink>

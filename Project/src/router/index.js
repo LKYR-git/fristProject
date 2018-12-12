@@ -1,3 +1,4 @@
+
 // 引入一级路由
 import LoginPage from '../routes/LoginPage';
 import MainPage from '../routes/MainPage';
@@ -10,6 +11,7 @@ import FriendPage from '../routes/friend/Index';
 import MyPage from '../routes/my/Index';
 import VideoPage from '../routes/video/Index';
 import SearchPage from '../routes/discover/search';
+import MusicPage from '../routes/anchor/MusicList';
 
 //引入三级路由
 import AnchorPage from '../routes/anchor/Index';
@@ -34,6 +36,9 @@ export default {
     },{
       path:'/main/search',
       component:SearchPage
+    },{
+      path:'/main/MusicList',
+      component:MusicPage
     },{
       path: '/main/discover',
       component: DiscoverPage,

@@ -19,23 +19,52 @@
         // _log();
         // console.log(m);
 
-        const tree ={
-            id:"root",
-            children:[
-                {
-                    id:1,children:[]
-                },{
-                    id:2,children:[]
-                },{
-                    id:3,children:[]
-                },{
-                    id:4,children:[
-                        {id:5,children:[]}
-                    ]
-                }
-            ]
-        }
-        根据id快速找到对应的元素
+        // const tree ={
+        //     id:"root",
+        //     children:[
+        //         {
+        //             id:1,children:[]
+        //         },{
+        //             id:2,children:[]
+        //         },{
+        //             id:3,children:[]
+        //         },{
+        //             id:4,children:[
+        //                 {id:5,children:[]}
+        //             ]
+        //         }
+        //     ]
+        // }
+        //根据id快速找到对应的元素
+
+        // var y =10;
+        // if(!(x in window)){
+        //     var x = 10;
+        // }else{
+        //     ++y;
+        // }
+        // console.log(x);
+        // console.log(y);
+
+        // for(var i=0;i<5;i++){
+        //     (function(){
+        //         setTimeout (function(){
+        //             console.log(i)
+        //         },i*100)
+        //     })(i)
+        // }
+
+        var number = 50;
+        var obj={
+            number:60,
+            getNum:function(){
+                var number = 70;
+                return this.number;
+            }
+        };
+        console.log(obj.getNum());
+        console.log(obj.getNum.call());
+        console.log(obj.getNum.call({number:20}))
     </script>
 </body>
 </html>

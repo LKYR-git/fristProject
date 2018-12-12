@@ -1,15 +1,13 @@
 import React from 'react';
 import styles from './Index.scss';
-import { SegmentedControl, WingBlank } from 'antd-mobile';
+import {NavLink} from 'dva/router';
 class Index extends React.PureComponent{
   render(){
     return <div className={styles.friendWrap}>
         <div className={styles.friendHeader}>
           <nav>
               <span><img src="../../../public/assets/friend.png"></img></span>
-                <WingBlank size="lg" className={styles.scExample}>
-                    <SegmentedControl values={['动态', '附近']} />
-                  </WingBlank>
+              <div className={styles.tab}><b>动态</b><b>附近</b></div>
               <span><img src="../../public/assets/audio.png"></img></span>
             </nav>
         </div>
