@@ -8,7 +8,7 @@ class LoginPage extends React.PureComponent{
     render(){
         return <div className={styles.login}>
             <div className={styles.icon}>
-                <img src="/public/assets/wangyiyunyinle (1).png"/>
+                <img src="./assets/wangyiyunyinle (1).png"/>
             </div>
             <div className={styles.btn}>
                 <p onClick={()=>{

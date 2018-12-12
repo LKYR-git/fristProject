@@ -47,19 +47,19 @@ class Index extends React.PureComponent{
 
         <div className={styles.list}>
           <dl>
-            <dt><img src="/assets/diantaizhibo.png"/></dt>
+            <dt><img src="./assets/diantaizhibo.png"/></dt>
             <span>私人FM</span>
           </dl>
           <dl>
-            <dt><img src="/assets/rili.png"/></dt>
+            <dt><img src="./assets/rili.png"/></dt>
             <span>每日推荐</span>
           </dl>
           <dl>
-            <dt><img src="/assets/caidan.png"/></dt>
+            <dt><img src="./assets/caidan.png"/></dt>
             <span><NavLink to='/main/MusicList'>歌单</NavLink></span>
           </dl>
           <dl>
-            <dt><img src="/assets/paixingbang.png"/></dt>
+            <dt><img src="./assets/paixingbang.png"/></dt>
             <span>排行榜</span>
           </dl>
       </div>

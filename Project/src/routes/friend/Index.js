@@ -6,9 +6,9 @@ class Index extends React.PureComponent{
     return <div className={styles.friendWrap}>
         <div className={styles.friendHeader}>
           <nav>
-              <span><img src="../../../public/assets/friend.png"></img></span>
+              <span><img src="./assets/friend.png"></img></span>
               <div className={styles.tab}><b>动态</b><b>附近</b></div>
-              <span><img src="../../public/assets/audio.png"></img></span>
+              <span><img src="./assets/audio.png"></img></span>
             </nav>
         </div>
     </div>

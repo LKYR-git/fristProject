@@ -134,7 +134,7 @@ export default class Play extends Component {
         return (
             <div className={styles.play}>
                 <div className={styles.playHeader}>
-                    <span><img src="/public/palyIcon/xiangzuojiantou.png"/></span>
+                    <span><img src="./palyIcon/xiangzuojiantou.png"/></span>
                     <div><span>{this.props.detail.name}--{this.props.detail.ar[0].name}</span></div>
                     <span></span>
                 </div>
