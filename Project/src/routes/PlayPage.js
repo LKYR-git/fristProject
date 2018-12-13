@@ -145,7 +145,7 @@ export default class Play extends Component {
                         </div>
                     </div>
                     <Lyric lyric={this.props.lyric} currentTime={this.refs.audio && this.refs.audio.currentTime}></Lyric>
-                    <AudioProcess audio={this.refs.audio}/>
+                    {/* <AudioProcess audio={this.refs.audio}/> */}
                 </Carousel>
                 <div className={styles.audio}>
                     <div className={styles.playTop}></div>
