@@ -164,11 +164,11 @@ export default class Play extends Component {
                     {this.props.url?<audio ref="audio" crossOrigin="anonymous" autoPlay src={this.props.url} onTimeUpdate={()=>this.timeUpdate()} ></audio>:null}
                     <div className={styles.playfooter}>
                         <ul>
-                            <li><img src="../../public/palyIcon/shuaxin.png"/></li>
-                            <li onClick={()=>this.chanagePlay('prev')}><img src="../../public/palyIcon/xiayishou1.png"/></li>
-                            <li onClick={this.chageState.bind(this)}>{isPlay?<img src="../../public/palyIcon/zanting.png"/>:<img src="../../public/palyIcon/weibiaoti--.png"/>}</li>
-                            <li onClick={()=>this.chanagePlay('next')}><img src="../../public/palyIcon/xiayishou1.png"/></li>
-                            <li><img src="../../public/palyIcon/liebiao.png"/></li>
+                            <li><img src="./palyIcon/shuaxin.png"/></li>
+                            <li onClick={()=>this.chanagePlay('prev')}><img src="./palyIcon/xiayishou1.png"/></li>
+                            <li onClick={this.chageState.bind(this)}>{isPlay?<img src="./palyIcon/zanting.png"/>:<img src="./palyIcon/weibiaoti--.png"/>}</li>
+                            <li onClick={()=>this.chanagePlay('next')}><img src="./palyIcon/xiayishou1.png"/></li>
+                            <li><img src="./palyIcon/liebiao.png"/></li>
                         </ul>
                     </div>
                 </div>
