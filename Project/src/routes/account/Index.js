@@ -15,7 +15,7 @@ class Index extends React.PureComponent{
               <div className={styles.top}>
                   <div className={styles.imgs}>
                     <span>
-                        <img src='../../../public/assets/wangyiyunyinle (1).png' />
+                        <img src='./assets/wangyiyunyinle (1).png' />
                     </span>
                   </div>
                   <span>浪客游人</span>

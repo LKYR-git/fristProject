@@ -79,11 +79,13 @@ export default class Play extends Component {
     }
     //暂停pause--播放play
     chageState(){
+        console.log(window._hmt);
         this.setState({
             isPlay:!this.state.isPlay
         },()=>{
             this.state.isPlay?this.refs.audio.play():this.refs.audio.pause();
-        })
+        });
+        
     }
     //触摸进度条触发
     touchStart(){

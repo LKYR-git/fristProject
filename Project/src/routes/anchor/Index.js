@@ -13,16 +13,12 @@ class Index extends React.PureComponent{
     getbanner();
     getPersonalized();
   }
-  // goMusiclist(){
-  //   this.props.history.push('/main/MusicList')
-  // }
   render(){
     let {
       getBannerList,
       getPersonalizedList
     } = this.props;
     let NewPersonalizedList = getPersonalizedList.slice(0,6);
-    console.log(NewPersonalizedList);
     return <div>
      <WingBlank>
         <Carousel

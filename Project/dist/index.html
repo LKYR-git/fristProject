@@ -6,10 +6,25 @@
   <title>网易云音乐</title>
   <link rel="stylesheet" href="./index.css" />
   <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-  <script>eruda.init();</script>
+   <!-- 检测报错系统 -->
+   <script src="https://browser.sentry-cdn.com/4.4.1/bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+      eruda.init();
+      Sentry.init({ dsn: 'https://bad08dff492e4bb1a575f5692b638c8d@sentry.io/1352779' });
+  </script>
 </head>
 <body>
-
+  <!-- 百度访问量 -->
+  <script>
+    var _hmt = _hmt || [];
+    window._hmt = _hmt;
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?725c4067679fbafecb9c245b23914b4e";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
   <div id="root" style="width:100%;height:100%"></div>
   <script src="./index.js"></script>
 <!-- <input type="text" placeholder="猜你喜欢 浮生"> -->

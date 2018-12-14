@@ -9,6 +9,7 @@ class Index extends React.PureComponent{
               <span><img src="./assets/friend.png"></img></span>
               <div className={styles.tab}><b>动态</b><b>附近</b></div>
               <span><img src="./assets/audio.png"></img></span>
+              <span>明珅范大好人啊 ！！！！</span>
             </nav>
         </div>
     </div>

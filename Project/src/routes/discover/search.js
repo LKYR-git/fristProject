@@ -49,14 +49,19 @@ export default class Search extends Component {
         }
         this.setState({
             falg:false
-        })
+        });
+        
     }
     playAlls(){
+        //埋点
+        window._hmt.push(['_trackEvent','网易云音乐','按钮点击','播放按钮']);
         this.props.playAll(this.props.songs.map(item=>item.id));
         this.props.history.push(`/play/${this.props.songs[0].id}`);
         this.setState({
             falg:false
         })
+        
+        
     }
 
     render() {

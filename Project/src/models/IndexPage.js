@@ -3,7 +3,8 @@ export default{
     
     state:{
         getPersonalizedList:[],
-        getBannerList:[]
+        getBannerList:[],
+        getmusiclist:[]
     },
 
     effects:{
@@ -31,14 +32,18 @@ export default{
                 payload:res.result
             })
         },
-        // *getMusicList(action,{call,put}){
-        //     let res = yield call(()=>{
-        //         return fetch(`http://123.206.55.50:14000/top/playlist`)
-        //         .then(res=>res.json())
-        //         .then(body=>body)
-        //     })
-        //     console.log('music',res);
-        // }
+        *getMusicList(action,{call,put}){
+            let res = yield call(()=>{
+                return fetch(`http://123.206.55.50:14000/top/playlist`)
+                .then(res=>res.json())
+                .then(body=>body)
+            })
+            console.log('music',res);
+            yield put({
+                type:'musiclist',
+                payload:res.playlists
+            })
+        }
     },
 
     reducers:{
@@ -47,6 +52,9 @@ export default{
         },
         Personalized(state,{payload}){
             return {...state,getPersonalizedList:payload}
+        },
+        musiclist(state,{payload}){
+            return {...state,getmusiclist:payload}
         }
     }
 }

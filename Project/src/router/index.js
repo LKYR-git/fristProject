@@ -37,7 +37,7 @@ const AccountPage = dynamic({
   component: () => import('../routes/account/Index')
 })
 const DiscoverPage = dynamic({
-  component: () => import('../routes/MainPage')
+  component: () => import('../routes/discover/Index')
 })
 const FriendPage = dynamic({
   component: () => import('../routes/friend/Index')
