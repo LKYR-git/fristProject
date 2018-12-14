@@ -13,6 +13,7 @@ class Index extends React.PureComponent{
               <span>明珅范大啊 ！！！！</span>
               <span>明珅范大好啊 ！！！！</span>
               <span>明珅范大好人啊 ！！！！</span>
+              <span>明珅范大好人啊，死折磨人啊 ！！！！</span>
             </nav>
         </div>
     </div>
